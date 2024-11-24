@@ -30,5 +30,4 @@ let ceil = Math.ceil(Math.random());
 console.log(`ceil number is: ${ceil}`)
 
 
-
 //for more math functions refer javascript math in mdn
