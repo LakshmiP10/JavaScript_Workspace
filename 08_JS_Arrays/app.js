@@ -168,7 +168,7 @@ employees.forEach((employee)=>{
 })
 console.log(result)
 
-//filter the eployess based on condition: age<=30
+//filter the employess based on condition: age<=30
 // I am not using filter funtion here.using just condition to filter array elements
 let juniorEmployees = [];
 for(let employee of employees){
@@ -186,6 +186,170 @@ for(let employee of employees){
     }
 }
 console.log(activeEmployees);
+
+//Array Built-in functions
+    /*
+    shift() : To remove the first elements from an array 
+    unshift(): To add the first element to an array
+    push() : add the last last element to an array
+    pop() : To remove the last element from an array
+    sort() : To sort the array elements in ascending order
+    reverse() : To reverse an array elements
+    splice() : To remove/replace (/add) elements from an array
+    join() : To join an array elements to string
+    split(): To split string to an array elements
+    slice() : To create a new copy of an array
+    forEach(): to run loop through the elements
+    find() : find an exact element based on condition from an array
+    filter() : to filter the array elements based on condition
+    */
+   // shift() : To remove the first elements from an array 
+   console.log('-----------------------shift()-----------------------');
+   let technologies = ['html','css','javascript','jquery','bootstrap'];
+   console.log(technologies);
+   technologies.shift();
+   console.log(technologies);
+
+   //   unshift(): To add the first element to an array
+   console.log('-----------------------unshift()-----------------------');
+    technologies = ['html','css','javascript','jquery','bootstrap'];
+   console.log(technologies);
+   technologies.unshift('node js');
+   console.log(technologies);
+   //    push() : add the last last element to an array
+
+console.log('-----------------------push()-----------------------');
+technologies = ['html','css','javascript','jquery','bootstrap'];
+console.log(technologies);
+technologies.push('node js');
+console.log(technologies);
+
+//    pop() : To remove the last element from an array
+console.log('-----------------------pop()-----------------------');
+technologies = ['html','css','javascript','jquery','bootstrap'];
+console.log(technologies);
+technologies.pop();
+console.log(technologies);
+//    sort() : To sort the array elements in ascending order based on character
+console.log('-----------------------sort()-----------------------');
+technologies = ['html','css','javascript','jquery','bootstrap'];
+console.log(technologies);
+technologies.sort();
+console.log(technologies);
+// reverse() : To reverse an array elements
+console.log('-----------------------reverse()-----------------------');
+technologies = ['html','css','javascript','jquery','bootstrap'];
+console.log(technologies);
+technologies.reverse();
+console.log(technologies);
+//  reverse order(/descending order) use sort() and reverse() functions combination to get descending order array
+console.log('-----------------------reverse order-----------------------');
+technologies = ['html','css','javascript','jquery','bootstrap'];
+console.log(technologies);
+technologies.sort().reverse();
+console.log(technologies);
+// splice() : To remove/replace (/add) elements from an array
+//case1 :  splice(index) - to removes all the elements from the given index
+console.log('-----------------------splice(index)-----------------------');
+technologies = ['html','css','javascript','jquery','bootstrap'];
+console.log(technologies);
+technologies.splice(2);
+console.log(technologies);
+
+//case2 :  splice(startIndex,deleteCount) - It removes the given no of elements from the given index
+console.log('-----------------------splice()-----------------------');
+technologies = ['html','css','javascript','jquery','bootstrap'];
+console.log(technologies);
+technologies.splice(2,2);   //from the index no two, deleteCount 2 elements removed
+console.log(technologies);
+//case3 :  splice(startIndex,(deleteCount)1,replaceElement) - It replaces the given element at the given index
+console.log('-------splice(startIndex,1,replaceElement)------');
+technologies = ['html','css','javascript','jquery','bootstrap'];
+console.log(technologies);
+technologies.splice(3,0,'reactJs','typescript');   //from the index no 3, deleteCount 1 element removed and replaced with reactJS in the given index
+console.log(technologies);
+//case4 : splice(startIndex,deleteCount 0,addElements) from the given index to remove 0 elements and add total no of elements in the given index
+console.log('-------splice(startIndex,0,addElement(s))------');
+technologies = ['html','css','javascript','jquery','bootstrap'];
+console.log(technologies);
+technologies.splice(3,0,'reactJs','typescript');   //from the index no 3, deleteCount 0 element removed and add elements from the given index
+console.log(technologies);
+//    join() : To join an array elements to string
+console.log('---------------join()------------');
+technologies = ['html','css','javascript','jquery','bootstrap'];
+console.log(technologies);
+let newAtString = technologies.join('@')   
+console.log(newAtString);
+
+let newSlashJoinStr = technologies.join('/');
+console.log(newSlashJoinStr);
+
+let techString = technologies.join(' - ');
+console.log(techString);
+
+
+//    split(): To split string to an array elements
+console.log('-------------split()-------------');
+console.log(techString);
+let newTechs = techString.split(' - ');
+console.log(newTechs);
+
+//    forEach(): to run loop through the elements
+console.log('-----------------forEach(fun)--------------------')
+let weekDays = ['sunDay','monDay','tuesDay','wednesDay','thursDay','friDay','saturDay'];
+console.log(weekDays);
+let resultDays = '';
+weekDays.forEach(day => {
+resultDays += `${day} `;
+});
+console.log(resultDays);
+
+//    filter() : to filter the array elements based on condition
+console.log('------junior employees age<=30------')
+juniorEmployees = [];
+for(let employee of employees){
+    if(employee.age<=30)
+    juniorEmployees.push(employee)
+}
+console.log(juniorEmployees);
+//junior employees using filter() method
+console.log("------Junior employees using filter()------")
+let jrEmployees = employees.filter(function(employee){
+return employee.age <= 30;
+});
+console.log(jrEmployees);
+
+
+//filter() active employees using if condition
+console.log('-----------active employees using if condition---------')
+result = '';
+ activeEmployees = [];
+for(let employee of employees){
+    if(employee.isActive === true){
+        activeEmployees.push(employee);
+    }
+}
+console.log(activeEmployees);
+//filter activeEmployees using filter() method
+console.log('---------active employees filter()----------')
+let actEmployees = employees.filter((employee)=>{
+    return employee.isActive;
+});
+console.log(actEmployees);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
