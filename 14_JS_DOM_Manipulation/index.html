@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Manipulation</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="app.css">
+
+</head>
+<body>
+    <nav>
+        <a href="#">JS DOM Manipulation</a>
+    </nav>
+    <div>
+        <h1 id="msg-1"> </h1>
+        <button onclick="printWishMessage('Good Morning','limegreen')">Good Morning</button>
+        <button onclick="printWishMessage('Good Afternoon','orangered')">Good Afternoon</button>
+        <button onclick="printWishMessage('Good Evening','purple')">Good Evening</button>
+        <button onclick="printWishMessage('Good Night','black')">Good Night</button>
+    </div>
+    <!--Limitation: there is inline mixing of html code with jscode.we should not write like this.
+     to overcome this problem eventListener concept introduced.
+     that is also known as universal function call -->
+    
+    <script src="app.js"></script>
+    
+</body>
+</html>
