@@ -1,0 +1,12 @@
+div{
+    background-color: gray;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+button{
+    font-size: 20px;
+    padding: 10px 15px;
+    margin-top: 10px;
+}
