@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Range Select</title>
+    <!-- local css files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .container{
+            margin: 30px;
+            padding: 20px;
+            background-color: lightgrey;
+        }
+        h3{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+     <nav>
+        <a href="#">JS Range Select</a>
+     </nav>
+     <!-- main content -->
+      <div class="container">
+        <h3>JS Range Select</h3>
+        <form>
+            <label>5000</label>
+            <input type="range" name="range" id="range" min="5000" max="500000">
+            <label>500000</label>
+            <h3 >&#8377;
+                <span id="amount"></span>
+            </h3>
+        </form>
+
+      </div>
+  
+     <!-- local js files -->
+      <script src="app.js"></script>
+</body>
+</html>
